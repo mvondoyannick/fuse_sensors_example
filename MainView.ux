@@ -1,0 +1,13 @@
+<App>
+	<Android.StatusBarConfig Color="#0003" IsVisible="True" />
+	<Router ux:Name="router" />
+	<Font File="fontawesome-webfont.ttf" ux:Global="FontAwesome" />
+	<JavaScript File="MainView.js" />
+	<ClientPanel Background="{bgColor}">
+		<Navigator DefaultPath="Main">
+			<Sensors.Main ux:Template="Main" router="router" />
+			<Sensors.pzyLoad ux:Template="payLoad" router="router" />
+		</Navigator>
+	</ClientPanel>
+
+</App>

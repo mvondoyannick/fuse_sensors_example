@@ -1,0 +1,14 @@
+{
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+    "Fuse.Sensor",
+    "Fuse.Alerts",
+    "Fuse.Maps",
+    "Fuse.LocalNotifications",
+  ],
+  "Includes": [
+    "*"
+  ]
+}
+

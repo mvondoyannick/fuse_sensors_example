@@ -1,0 +1,28 @@
+<Panel ux:Class="Sensors.Main">
+	<Router ux:Dependency="router" />
+	<JavaScript File="MainView.js" />
+	<DockPanel>
+		<ScrollView>
+			<StackPanel ItemSpacing="30" Alignment="VerticalCenter" Margin="0,-30,0,0">
+				<WhileFalse Value="{isNight}">
+					<Text Value="&#xf185;" Font="FontAwesome" TextAlignment="Center" Alignment="Center" FontSize="40" TextColor="{txtColor}" >
+					</Text>
+				</WhileFalse>
+				<WhileTrue Value="{isNight}">
+					<Text Font="FontAwesome" TextAlignment="Center" Alignment="Center" FontSize="40" TextColor="{txtColor}">&#xf186;</Text>
+				</WhileTrue>
+				<Text Value="startListening" Clicked="{startMonitoringState}" TextAlignment="Center" Alignment="VerticalCenter" TextColor="{txtColor}" />
+				<Text Value="stopListening" Clicked="{stopLMenitoringState}" TextAlignment="Center" Alignment="VerticalCenter" TextColor="{txtColor}" />
+				<Text Value='{battery}% | {batteryState}' Font="Bold" TextAlignment="Center" Alignment="Center" TextColor="{txtColor}" />
+				<Text Value='Network Status : {network}' Font="Bold" TextAlignment="Center" Alignment="Center" TextColor="{txtColor}" />
+				<!-- maps intégration -->
+				<!-- <NativeViewHost Width="100%" Height="500">
+					<MapView Latitude="59.911567" Longitude="10.741030" Zoom="10" >
+						<MapMarker Latitude="59.911567" Longitude="10.741030" Label="Fuse HQ"/>
+					</MapView>
+				</NativeViewHost> -->
+
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</Panel>

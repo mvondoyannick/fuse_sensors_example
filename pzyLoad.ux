@@ -1,0 +1,20 @@
+<Panel ux:Class="Sensors.pzyLoad">
+	<Router ux:Dependency="router" />
+	<JavaScript>
+		var hikr = this.Parameter;
+		module.exports = {
+			hikr: hikr
+		};
+	</JavaScript>
+	<DockPanel>
+		<StatusBarBackground Dock="Top" />
+		<BottomBarBackground Dock="Bottom" />
+		<Panel Dock="Top" Height="50" Width="100%" Background="#FFF">
+			<Text Value="Payload" TextAlignment="Center" TextColor="#000" Alignment="VerticalCenter" />
+			<DropShadow />
+		</Panel>
+		<StackPanel ItemSpacing="20" Alignment="VerticalCenter">
+			<Text Value='{hikr}' TextAlignment="Center" TextColor="#FFF" TextWrapping="Wrap" />
+		</StackPanel>
+	</DockPanel>
+</Panel>
