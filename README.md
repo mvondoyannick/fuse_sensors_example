@@ -1,6 +1,6 @@
 # fuse_sensors_example
 ## adding some fuse features like sensors on devices
-```
+```javascript
 var Sensor = require("FuseJS/Sensor")
 Sensor.on('changed', function(data) {
     switch (data.type) {
